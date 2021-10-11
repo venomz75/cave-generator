@@ -8,7 +8,7 @@ import net.slashie.libjcsi.CharKey;
 import lib.Level;
 import lib.Character;
 
-public class RougeTest3 {
+public class ProceduralGen {
 
 	public static void main(String[] args) {
 		Properties text = new Properties();
@@ -17,7 +17,7 @@ public class RougeTest3 {
 		
 		ConsoleSystemInterface csi = null;
 		try{
-				csi = new WSwingConsoleInterface("Roguelike Test 3!", text);
+				csi = new WSwingConsoleInterface("Procedural Generation Test", text);
 		}
 		catch (ExceptionInInitializerError eiie) {
 			System.out.println("*** Error: Swing Console Box cannot be initialized. Exiting...");
@@ -57,7 +57,7 @@ public class RougeTest3 {
 					csi.print(x, y, floor[flr].checkTile(x,y), colour);
 				}
 			}
-			csi.print(0, 24, "Level:" +flr+ " X:" +player.getX()+ " Y:" +player.getY(), CSIColor.WHITE);
+			csi.print(0, 24, "Level:" +flr+ " X:" +player.getX()+ " Y:" +player.getY()+ "       Arrow keys to move. F to regenerate cave. Q to quit.", CSIColor.WHITE);
 			csi.refresh();
 //			try {
 //				level.drawGrid();
